@@ -1,0 +1,42 @@
+#!nsh
+#
+# @name Spindrone based on DJI Flame Wheel F450
+#
+# @type Quadrotor x
+#
+# @output MAIN5 left motor
+# @output MAIN6 right motor
+#
+# @maintainer Eduardo Aldaz Carroll
+
+sh /etc/init.d/rc.mc_defaults
+
+set MIXER spindrone
+
+# This shouldn't be necessary. MAV_TYPE 2 is assigned by default if vehicle name not known, but a warning appears in boot so setting it
+#set VEHICLE_TYPE mc
+set MAV_TYPE 2
+
+# Add channels 5 and 6  , but need to add the rest as they are part of a group, info not
+# documented of course and had to sweat to find it.
+set PWM_OUT 12345678   # Doesn't work well for some reason, cahnnel 6 doesn't turn on, so using AUX, which seems what VTOL people do (but only for servos)
+#set PWM_OUT 1234
+
+
+if [ $AUTOCNF == yes ]
+then
+	param set MC_ROLL_P 7.0
+	param set MC_ROLLRATE_P 0.15
+	param set MC_ROLLRATE_I 0.05
+	param set MC_ROLLRATE_D 0.003
+	param set MC_PITCH_P 7.0
+	param set MC_PITCHRATE_P 0.15
+	param set MC_PITCHRATE_I 0.05
+	param set MC_PITCHRATE_D 0.003
+	param set MC_YAW_P 2.8
+	param set MC_YAWRATE_P 0.3
+	param set MC_YAWRATE_I 0.1
+	param set MC_YAWRATE_D 0.0
+	# DJI ESCs do not support calibration and need a higher min
+	param set PWM_MIN 1230
+fi
