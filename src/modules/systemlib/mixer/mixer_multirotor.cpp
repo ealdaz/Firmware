@@ -235,7 +235,8 @@ MultirotorMixer::mix(float *outputs, unsigned space, uint16_t *status_reg)
 
 	float		roll    = constrain(get_control(0, 0) * _roll_scale, -1.0f, 1.0f);
 	float		pitch   = constrain(get_control(0, 1) * _pitch_scale, -1.0f, 1.0f);
-	float		yaw     = constrain(get_control(0, 2) * _yaw_scale, -1.0f, 1.0f);
+        //float		yaw     = constrain(get_control(0, 2) * _yaw_scale, -1.0f, 1.0f);
+        float yaw = 0; // Eliminate yaw from the mixer, so that no yaw control is done
 	float		thrust  = constrain(get_control(0, 3), 0.0f, 1.0f);
 	float		min_out = 1.0f;
 	float		max_out = 0.0f;
