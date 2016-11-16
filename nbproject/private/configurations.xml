@@ -4326,6 +4326,10 @@
                     <in>board.h</in>
                     <in>nsh_romfsimg.h</in>
                   </df>
+                  <df name="nsh">
+                  </df>
+                  <df name="scripts">
+                  </df>
                   <df name="src">
                     <in>empty.c</in>
                   </df>
@@ -6644,6 +6648,10 @@
                 <in>wd_start.c</in>
               </df>
               <df name="syscall">
+                <df name="proxies">
+                </df>
+                <df name="stubs">
+                </df>
                 <in>syscall_clock_systimer.c</in>
                 <in>syscall_funclookup.c</in>
                 <in>syscall_lookup.h</in>
@@ -6651,6 +6659,30 @@
                 <in>syscall_stublookup.c</in>
               </df>
               <df name="tools">
+                <df name="mkconfig.dSYM">
+                  <df name="Contents">
+                    <df name="Resources">
+                      <df name="DWARF">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+                <df name="mkdeps.dSYM">
+                  <df name="Contents">
+                    <df name="Resources">
+                      <df name="DWARF">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+                <df name="mkversion.dSYM">
+                  <df name="Contents">
+                    <df name="Resources">
+                      <df name="DWARF">
+                      </df>
+                    </df>
+                  </df>
+                </df>
                 <df name="pic32mx">
                   <in>mkpichex.c</in>
                 </df>

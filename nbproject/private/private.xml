@@ -9,6 +9,23 @@
     </data>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/rover_steering_control/main.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_px4fmu-v2_default/src/modules/systemlib/mixer/mixer_multirotor.generated.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer_multirotor.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/init.d/4070_spindrone</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/mixers/quad_w.main.mix</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/uORB/uORB.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/init.d/rc.mc_defaults</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/mixers/spindrone.aux.mix</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/mixers/spindrone.main.mix</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/platforms/ros/nodes/mc_mixer/mc_mixer.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/px4_simple_app/px4_simple_app.c</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/mixers/skywalker.main.mix</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/multi_tables.py</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer_simple.cpp</file>
+        </group>
     </open-files>
 </project-private>

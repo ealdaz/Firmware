@@ -23970,6 +23970,7 @@
               <pElem>src/platforms/posix/include</pElem>
               <pElem>external/Install/include</pElem>
               <pElem>src/platforms/nuttx</pElem>
+              <pElem>src/modules/systemlib/mixer</pElem>
             </incDir>
             <preprocessorList>
               <Elem>__PX4_NUTTX</Elem>
@@ -23992,19 +23993,10 @@
               <pElem>src/lib/eigen</pElem>
               <pElem>src/platforms/posix/include</pElem>
               <pElem>external/Install/include</pElem>
+              <pElem>src/modules/systemlib/mixer</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>CLOCK_MONOTONIC=1</Elem>
-              <Elem>CLOCK_REALTIME=0</Elem>
-              <Elem>CONFIG_ARCH_BOARD_SITL</Elem>
-              <Elem>CONFIG_WCHAR_BUILTIN</Elem>
-              <Elem>__CUSTOM_FILE_IO__</Elem>
-              <Elem>__DF_DARWIN</Elem>
-              <Elem>__PX4_APPLE_LEGACY</Elem>
-              <Elem>__PX4_DARWIN</Elem>
-              <Elem>__PX4_POSIX</Elem>
-              <Elem>__STDC_FORMAT_MACROS</Elem>
-              <Elem>noreturn_function=\"__attribute__((noreturn))\"</Elem>
+              <Elem>__PX4_NUTTX</Elem>
             </preprocessorList>
             <undefinedList>
               <Elem>__EXCEPTIONS</Elem>
@@ -27069,20 +27061,49 @@
               <pElem>src/include</pElem>
               <pElem>src/lib</pElem>
               <pElem>src/drivers/boards/sitl</pElem>
-              <pElem>srcmodules/px4_messages</pElem>
+              <pElem>src/modules/px4_messages</pElem>
               <pElem>mavlink/include/mavlink</pElem>
               <pElem>src/lib/DriverFramework/framework/include</pElem>
               <pElem>src/lib/matrix</pElem>
               <pElem>src/modules/systemlib</pElem>
               <pElem>src/lib/eigen</pElem>
               <pElem>src/platforms/posix/include</pElem>
-              <pElem>external/install/include</pElem>
+              <pElem>external/Install/include</pElem>
               <pElem>src/platforms/nuttx</pElem>
+              <pElem>src/modules/systemlib/mixer/mixer_multirotor.generated.h</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>__NUTTX</Elem>
+              <Elem>__PX4_NUTTX</Elem>
             </preprocessorList>
           </cTool>
+          <ccTool>
+            <incDir>
+              <pElem>src</pElem>
+              <pElem>.</pElem>
+              <pElem>src/modules</pElem>
+              <pElem>src/include</pElem>
+              <pElem>src/lib</pElem>
+              <pElem>src/platforms</pElem>
+              <pElem>src/drivers/boards/sitl</pElem>
+              <pElem>src/modules/px4_messages</pElem>
+              <pElem>mavlink/include/mavlink</pElem>
+              <pElem>src/lib/DriverFramework/framework/include</pElem>
+              <pElem>src/lib/matrix</pElem>
+              <pElem>src/modules/systemlib</pElem>
+              <pElem>src/lib/eigen</pElem>
+              <pElem>src/platforms/posix/include</pElem>
+              <pElem>external/Install/include</pElem>
+              <pElem>src/modules/systemlib/mixer</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>__PX4_NUTTX</Elem>
+            </preprocessorList>
+            <undefinedList>
+              <Elem>__EXCEPTIONS</Elem>
+              <Elem>__GCC_HAVE_DWARF2_CFI_ASM</Elem>
+              <Elem>__GXX_RTTI</Elem>
+            </undefinedList>
+          </ccTool>
         </makeTool>
       </makefileType>
       <item path="CMakeFiles/3.6.3/CompilerIdC/CMakeCCompilerId.c"
