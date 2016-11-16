@@ -27060,6 +27060,29 @@
           <buildCommand>${MAKE} px4fmu-v2_default upload</buildCommand>
           <cleanCommand>${MAKE} clean</cleanCommand>
           <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>NuttX/nuttx/include</pElem>
+              <pElem>src</pElem>
+              <pElem>.</pElem>
+              <pElem>src/modules</pElem>
+              <pElem>src/include</pElem>
+              <pElem>src/lib</pElem>
+              <pElem>src/drivers/boards/sitl</pElem>
+              <pElem>srcmodules/px4_messages</pElem>
+              <pElem>mavlink/include/mavlink</pElem>
+              <pElem>src/lib/DriverFramework/framework/include</pElem>
+              <pElem>src/lib/matrix</pElem>
+              <pElem>src/modules/systemlib</pElem>
+              <pElem>src/lib/eigen</pElem>
+              <pElem>src/platforms/posix/include</pElem>
+              <pElem>external/install/include</pElem>
+              <pElem>src/platforms/nuttx</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>__NUTTX</Elem>
+            </preprocessorList>
+          </cTool>
         </makeTool>
       </makefileType>
       <item path="CMakeFiles/3.6.3/CompilerIdC/CMakeCCompilerId.c"

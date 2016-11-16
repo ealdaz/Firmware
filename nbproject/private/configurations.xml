@@ -11,6 +11,14 @@
             </df>
           </df>
         </df>
+        <df name="external">
+          <df name="Install">
+            <df name="include">
+            </df>
+            <df name="lib">
+            </df>
+          </df>
+        </df>
         <df name="msg">
           <df name="CMakeFiles">
           </df>
@@ -4318,10 +4326,6 @@
                     <in>board.h</in>
                     <in>nsh_romfsimg.h</in>
                   </df>
-                  <df name="nsh">
-                  </df>
-                  <df name="scripts">
-                  </df>
                   <df name="src">
                     <in>empty.c</in>
                   </df>
@@ -6640,10 +6644,6 @@
                 <in>wd_start.c</in>
               </df>
               <df name="syscall">
-                <df name="proxies">
-                </df>
-                <df name="stubs">
-                </df>
                 <in>syscall_clock_systimer.c</in>
                 <in>syscall_funclookup.c</in>
                 <in>syscall_lookup.h</in>
@@ -6651,30 +6651,6 @@
                 <in>syscall_stublookup.c</in>
               </df>
               <df name="tools">
-                <df name="mkconfig.dSYM">
-                  <df name="Contents">
-                    <df name="Resources">
-                      <df name="DWARF">
-                      </df>
-                    </df>
-                  </df>
-                </df>
-                <df name="mkdeps.dSYM">
-                  <df name="Contents">
-                    <df name="Resources">
-                      <df name="DWARF">
-                      </df>
-                    </df>
-                  </df>
-                </df>
-                <df name="mkversion.dSYM">
-                  <df name="Contents">
-                    <df name="Resources">
-                      <df name="DWARF">
-                      </df>
-                    </df>
-                  </df>
-                </df>
                 <df name="pic32mx">
                   <in>mkpichex.c</in>
                 </df>
@@ -23527,19 +23503,6 @@
             <in>empty.c</in>
           </df>
         </df>
-        <df name="px4fmu-v3">
-          <df name="include">
-            <in>board.h</in>
-            <in>nsh_romfsimg.h</in>
-          </df>
-          <df name="nsh">
-          </df>
-          <df name="scripts">
-          </df>
-          <df name="src">
-            <in>empty.c</in>
-          </df>
-        </df>
         <df name="px4fmu-v4">
           <df name="include">
             <in>board.h</in>
@@ -23633,6 +23596,12 @@
           <df name="init.d">
           </df>
           <df name="mixers">
+            <df name="test">
+              <df name="switched">
+              </df>
+              <df name="switchedYawG0">
+              </df>
+            </df>
           </df>
         </df>
         <df name="px4fmu_test">
@@ -23752,9 +23721,6 @@
               <in>px4fmu_spi.c</in>
               <in>px4fmu_timer_config.c</in>
               <in>px4fmu_usb.c</in>
-            </df>
-            <df name="px4fmu-v3">
-              <in>board_config.h</in>
             </df>
             <df name="px4fmu-v4">
               <in>board_config.h</in>
@@ -25229,46 +25195,6 @@
                   <df name="libuavcan_dsdl_compiler">
                   </df>
                   <df name="pyuavcan">
-                    <df name="dsdl">
-                      <df name="uavcan">
-                        <df name="equipment">
-                          <df name="actuator">
-                          </df>
-                          <df name="ahrs">
-                          </df>
-                          <df name="air_data">
-                          </df>
-                          <df name="camera_gimbal">
-                          </df>
-                          <df name="esc">
-                          </df>
-                          <df name="gnss">
-                          </df>
-                          <df name="hardpoint">
-                          </df>
-                          <df name="indication">
-                          </df>
-                          <df name="power">
-                          </df>
-                          <df name="range_sensor">
-                          </df>
-                          <df name="safety">
-                          </df>
-                        </df>
-                        <df name="protocol">
-                          <df name="debug">
-                          </df>
-                          <df name="dynamic_node_id">
-                            <df name="server">
-                            </df>
-                          </df>
-                          <df name="file">
-                          </df>
-                          <df name="param">
-                          </df>
-                        </df>
-                      </df>
-                    </df>
                     <df name="test">
                       <df name="dsdl">
                       </df>
