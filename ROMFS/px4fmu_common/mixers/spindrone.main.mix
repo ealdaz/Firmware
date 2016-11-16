@@ -4,21 +4,25 @@ Mixer for Spindrone Airframe
 This file defines mixers suitable for controlling a Quadrocopter X based craft
 with two motors L,R for yaw control.
 
-R: 4x 10000 10000 10000 0
-
 Inputs to the yaw motor mixers come from channel group 3 (Manual Passthru), channels 2 (yaw) and 3 (throttle).
 Yaw is -1,1
 Throttle is 0,-1
 
-
-Left Motor is connected to channel 5
+Left Motor is connected to channel 1
 M: 2
 O:      10000  10000      0 -10000  10000
 S: 3 2  10000  10000      0 -10000  10000
 S: 3 3      0  20000 -10000 -10000  10000
 
-Right Motor is connected to channel 6
+Right Motor is connected to channel 2
 M: 2
 O:      10000  10000      0 -10000  10000
 S: 3 2  -10000  -10000      0 -10000  10000
 S: 3 3      0  20000 -10000 -10000  10000
+
+Have declared the multirotor mixer after the simple mixers because the other way around doesn't work
+channel 6 isn't enabled for some reason
+R: 4x 10000 10000 10000 0
+
+
+

@@ -58,7 +58,7 @@ set MAV_TYPE 2
 
 # Add channels 5 and 6  , but need to add the rest as they are part of a group, info not
 # documented of course and had to sweat to find it.
-set PWM_OUT 12345678   # Doesn't work well for some reason, channel 6 doesn't turn on
+set PWM_OUT 12345678   
 #set PWM_OUT 1234
 
 
