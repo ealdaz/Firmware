@@ -1,0 +1,24 @@
+Mixer for a Spindrone VTOL
+=======================
+
+This file defines mixers suitable for controlling a Quadrocopter + based craft
+with two motors L,R for yaw control.
+
+Horizontal Throttle is fed to AUX1, the assignment is done from Radio Menu of QGroundControl. 
+I am using the right vertical lever that was used for pitch.
+
+Inputs to the yaw motor mixers:
+Yaw: Control Group 1 (Flight Control VTOL/Alternate ) channel 2 (yaw) 
+Horizontal Throttle : Control Group 1 (Flight Control VTOL/Alternate) channel 3 (Throttle).
+
+Left Motor is connected to channel 1
+M: 2
+O:      10000  10000      0 -10000  10000
+S: 1 3      0  20000 -10000 -10000  10000
+S: 1 2  10000  10000      0 -10000  10000
+
+Right Motor is connected to channel 2
+M: 2
+O:      10000  10000      0 -10000  10000
+S: 1 3      0  20000 -10000 -10000  10000
+S: 1 2  -10000  -10000      0 -10000  10000
