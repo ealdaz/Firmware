@@ -1,0 +1,38 @@
+#!nsh
+#
+# @name Rover Boat
+#
+# @type Rover
+#
+set VEHICLE_TYPE rover
+
+# This section can be enabled once tuning parameters for this particular
+# rover model are known. It allows to configure default gains via the GUI
+#if [ $AUTOCNF == yes ]
+#then
+#	# param set MC_ROLL_P 7.0
+#fi
+
+#Disable Airspeed Sensor Check
+set CBRK_AIRSPD_CHK 162128
+
+# PWM Hz - I am not using an ESC, just a simple motor driver with PWM, with 50HZ the averages are too low
+# using 400 Hz gives me better values ( although can't really get to 100% with 2000us need 2500)
+set PWM_RATE 400
+
+
+# PWM default value for "disarmed" mode to stop motors from moving
+set PWM_DISARMED 0
+# PWM_MAX is limited internally to 2150us
+set PWM_MAX 2200
+# PWM_MIN is 90us regardless of the value, must be an internal limitation, makes a humming noise on motors, hope it's ok
+set PWM_MIN 10
+
+
+# Enable servo output on pins 3 and 4 (steering and thrust)
+# but also include 1+2 as they form together one output group
+# and need to be set together.
+set PWM_OUT 1234
+
+#choose a mixer, for rover control we need a plain passthrough to the servos
+set MIXER roverboat

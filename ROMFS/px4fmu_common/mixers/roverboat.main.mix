@@ -1,0 +1,21 @@
+Mixer for a Spindrone VTOL
+=======================
+
+This file defines mixers suitable for controlling a land based rover
+with two motors L,R for thrust yaw control.
+
+Inputs to the yaw motor mixers:
+Yaw: Control Group 0 (Flight Control ) channel 2 (yaw) 
+Horizontal Throttle : Control Group 0 (Flight Control ) channel 3 (Throttle).
+
+Left Motor is connected to channel 1
+M: 2
+O:      10000  10000      0 -10000  10000
+S: 0 3      0  20000 -10000 -10000  10000
+S: 0 2  10000  10000      0 -10000  10000
+
+Right Motor is connected to channel 2
+M: 2
+O:      10000  10000      0 -10000  10000
+S: 0 3      0  20000 -10000 -10000  10000
+S: 0 2  -10000  -10000      0 -10000  10000
