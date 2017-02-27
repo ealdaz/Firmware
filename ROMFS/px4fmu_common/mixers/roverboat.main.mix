@@ -1,8 +1,8 @@
-Mixer for a Spindrone VTOL
+Mixer for a Rover with differential drive
 =======================
 
 This file defines mixers suitable for controlling a land based rover
-with two motors L,R for thrust yaw control.
+with two motors L,R for differential drive ( thrust & yaw control).
 
 Inputs to the yaw motor mixers:
 Yaw: Control Group 0 (Flight Control ) channel 2 (yaw) 
