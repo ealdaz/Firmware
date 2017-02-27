@@ -41,6 +41,7 @@
 #include <px4_posix.h>
 #include <px4_defines.h>
 #include <px4_workqueue.h>
+#include <px4_tasks.h>
 #include <drivers/drv_hrt.h>
 #include <semaphore.h>
 #include <time.h>
@@ -94,7 +95,6 @@ static void hrt_unlock(void)
 }
 
 #if defined(__PX4_APPLE_LEGACY)
-#include <time.h>
 #include <sys/time.h>
 
 int px4_clock_gettime(clockid_t clk_id, struct timespec *tp)
@@ -339,8 +339,8 @@ void	hrt_stop_delay()
 	_delay_interval += delta;
 	_start_delay_time = 0;
 
-	if (delta > 10000) {
-		PX4_INFO("simulator is slow. Delay added: %" PRIu64 " us", delta);
+	if (delta > 100000) {
+		PX4_INFO("Computer load temporarily too high for real-time simulation. (slowdown delay: %" PRIu64 " us)", delta);
 	}
 
 	pthread_mutex_unlock(&_hrt_mutex);

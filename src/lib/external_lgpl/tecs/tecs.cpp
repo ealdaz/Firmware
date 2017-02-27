@@ -171,7 +171,7 @@ void TECS::_update_speed(float airspeed_demand, float indicated_airspeed,
 	_update_speed_last_usec = now;
 }
 
-void TECS::_update_speed_demand(void)
+void TECS::_update_speed_demand()
 {
 	// Set the airspeed demand to the minimum value if an underspeed condition exists
 	// or a bad descent condition exists
@@ -276,7 +276,7 @@ void TECS::_update_height_demand(float demand, float state)
 	//warnx("_hgt_rate_dem: %.4f, _hgt_dem_adj %.4f", _hgt_rate_dem, _hgt_dem_adj);
 }
 
-void TECS::_detect_underspeed(void)
+void TECS::_detect_underspeed()
 {
 	if (!_detect_underspeed_enabled) {
 		_underspeed = false;
@@ -291,7 +291,7 @@ void TECS::_detect_underspeed(void)
 	}
 }
 
-void TECS::_update_energies(void)
+void TECS::_update_energies()
 {
 	// Calculate specific energy demands
 	_SPE_dem = _hgt_dem_adj * CONSTANTS_ONE_G;
@@ -393,7 +393,7 @@ void TECS::_update_throttle(float throttle_cruise, const math::Matrix<3,3> &rotM
 	}
 }
 
-void TECS::_detect_bad_descent(void)
+void TECS::_detect_bad_descent()
 {
 	// Detect a demanded airspeed too high for the aircraft to achieve. This will be
 	// evident by the the following conditions:
@@ -421,7 +421,7 @@ void TECS::_detect_bad_descent(void)
 	_badDescent = false;
 }
 
-void TECS::_update_pitch(void)
+void TECS::_update_pitch()
 {
 	// Calculate Speed/Height Control Weighting
 	// This is used to determine how the pitch control prioritises speed and height control
@@ -447,35 +447,36 @@ void TECS::_update_pitch(void)
 	_SEB_error = SEB_dem - (_SPE_est * SPE_weighting - _SKE_est * SKE_weighting);
 	_SEBdot_error = SEBdot_dem - (_SPEdot * SPE_weighting - _SKEdot * SKE_weighting);
 
+	// Calculate factor relating an error in specific energy to a desired delta pitch angle
+	float gainInv = _integ5_state * _timeConst * CONSTANTS_ONE_G;
+
 	// Calculate integrator state, constraining input if pitch limits are exceeded
 	float integ7_input = _SEB_error * _integGain;
 
+	// constrain the integrator input to prevent it changing in the direction that increases pitch demand saturation
+	// if the pitch demand is saturated, then decay the integrator at the control loop time constant
 	if (_pitch_dem_unc > _PITCHmaxf) {
-		integ7_input = min(integ7_input, _PITCHmaxf - _pitch_dem_unc);
+		integ7_input = min(integ7_input, min((_PITCHmaxf - _pitch_dem_unc) * gainInv / _timeConst, 0.0f));
 
 	} else if (_pitch_dem_unc < _PITCHminf) {
-		integ7_input = max(integ7_input, _PITCHminf - _pitch_dem_unc);
+		integ7_input = max(integ7_input, max((_PITCHminf - _pitch_dem_unc) * gainInv / _timeConst, 0.0f));
 	}
 
+	// pitch loop integration
 	_integ7_state = _integ7_state + integ7_input * _DT;
 
-	// Apply max and min values for integrator state that will allow for no more than
-	// 5deg of saturation. This allows for some pitch variation due to gusts before the
-	// integrator is clipped. Otherwise the effectiveness of the integrator will be reduced in turbulence
+	// Specific Energy Balance correction excluding integrator contribution
+	float SEB_correction = _SEB_error + _SEBdot_error * _ptchDamp + SEBdot_dem * _timeConst;
+
 	// During climbout/takeoff, bias the demanded pitch angle so that zero speed error produces a pitch angle
 	// demand equal to the minimum value (which is )set by the mission plan during this mode). Otherwise the
 	// integrator has to catch up before the nose can be raised to reduce speed during climbout.
-	float gainInv = _integ5_state * _timeConst * CONSTANTS_ONE_G;
-	float temp = _SEB_error + _SEBdot_error * _ptchDamp + SEBdot_dem * _timeConst;
 	if (_climbOutDem) {
-		temp += _PITCHminf * gainInv;
+		SEB_correction += _PITCHminf * gainInv;
 	}
-	float integ7_err_min = (gainInv * (_PITCHminf - math::radians(5.0f))) - temp;
-	float integ7_err_max = (gainInv * (_PITCHmaxf + math::radians(5.0f))) - temp;
-	_integ7_state = constrain(_integ7_state, integ7_err_min, integ7_err_max);
 
 	// Calculate pitch demand from specific energy balance signals
-	_pitch_dem_unc = (temp + _integ7_state) / gainInv;
+	_pitch_dem_unc = (SEB_correction + _integ7_state) / gainInv;
 
 	// Constrain pitch demand
 	_pitch_dem = constrain(_pitch_dem_unc, _PITCHminf, _PITCHmaxf);
@@ -543,7 +544,7 @@ void TECS::_initialise_states(float pitch, float throttle_cruise, float baro_alt
 	_states_initalized = true;
 }
 
-void TECS::_update_STE_rate_lim(void)
+void TECS::_update_STE_rate_lim()
 {
 	// Calculate Specific Total Energy Rate Limits
 	// This is a trivial calculation at the moment but will get bigger once we start adding altitude effects
@@ -583,14 +584,14 @@ void TECS::update_pitch_throttle(const math::Matrix<3,3> &rotMat, float pitch, f
 	// Calculate Specific Total Energy Rate Limits
 	_update_STE_rate_lim();
 
+	// Detect underspeed condition
+	_detect_underspeed();
+
 	// Calculate the speed demand
 	_update_speed_demand();
 
 	// Calculate the height demand
 	_update_height_demand(hgt_dem, baro_altitude);
-
-	// Detect underspeed condition
-	_detect_underspeed();
 
 	// Calculate specific energy quantitiues
 	_update_energies();
