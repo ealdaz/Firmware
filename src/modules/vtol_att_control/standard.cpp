@@ -141,7 +141,7 @@ void Standard::update_vtol_state()
 			_mc_roll_weight = 1.0f;
 			_mc_pitch_weight = 1.0f;
 			_mc_yaw_weight = 1.0f;
-			_mc_throttle_weight = 1.0f;
+			_mc_throttle_weight = 1.0f;  
 
 		} else if (_vtol_schedule.flight_mode == FW_MODE) {
 			// transition to mc mode
@@ -189,7 +189,7 @@ void Standard::update_vtol_state()
 		} else if (_vtol_schedule.flight_mode == FW_MODE) {
 			// in fw mode
 			_vtol_schedule.flight_mode = FW_MODE;
-			_mc_roll_weight = 0.0f;
+			_mc_roll_weight =  0.0f;
 			_mc_pitch_weight = 0.0f;
 			_mc_yaw_weight = 0.0f;
 			_mc_throttle_weight = 0.0f;
@@ -401,11 +401,14 @@ void Standard::update_fw_state()
 	VtolType::update_fw_state();
 
 	// in fw mode we need the multirotor motors to stop spinning, in backtransition mode we let them spin up again
+        
+        // EDU: I don't want to disable mc motors
 	if (!_flag_enable_mc_motors) {
-		set_max_mc(950);
-		set_idle_fw();  // force them to stop, not just idle
+		//set_max_mc(950); 
+		//set_idle_fw();  // force them to stop, not just idle
 		_flag_enable_mc_motors = true;
 	}
+        
 }
 
 /**
@@ -414,22 +417,48 @@ void Standard::update_fw_state()
  */
 void Standard::fill_actuator_outputs()
 {
-	// multirotor controls
-	_actuators_out_0->timestamp = _actuators_mc_in->timestamp;
-
-	// roll
+    // multirotor controls
+    
+    _actuators_out_0->timestamp = _actuators_mc_in->timestamp;
+    
+    if ( _vtol_schedule.flight_mode == FW_MODE )
+    {
+	
+        // roll
+	_actuators_out_0->control[actuator_controls_s::INDEX_ROLL] =
+                _actuators_fw_in->control[actuator_controls_s::INDEX_ROLL] ;
+		//_actuators_mc_in->control[actuator_controls_s::INDEX_ROLL];// * _mc_roll_weight;
+                
+	// pitch
+	_actuators_out_0->control[actuator_controls_s::INDEX_PITCH] =
+                _actuators_fw_in->control[actuator_controls_s::INDEX_PITCH];
+		//_actuators_mc_in->control[actuator_controls_s::INDEX_PITCH];// * _mc_pitch_weight;
+	// yaw
+	_actuators_out_0->control[actuator_controls_s::INDEX_YAW] = 0; 
+	//	_actuators_mc_in->control[actuator_controls_s::INDEX_YAW] * 0.0f; //_mc_yaw_weight;
+	// throttle
+	_actuators_out_0->control[actuator_controls_s::INDEX_THROTTLE] = 0.1;
+               // _actuators_fw_in->control[actuator_controls_s::INDEX_THROTTLE]; //0.6;
+		//_actuators_mc_in->control[actuator_controls_s::INDEX_THROTTLE];// * _mc_throttle_weight;
+    }
+    
+    else
+    {
+        // roll
 	_actuators_out_0->control[actuator_controls_s::INDEX_ROLL] =
 		_actuators_mc_in->control[actuator_controls_s::INDEX_ROLL] * _mc_roll_weight;
+                
 	// pitch
 	_actuators_out_0->control[actuator_controls_s::INDEX_PITCH] =
 		_actuators_mc_in->control[actuator_controls_s::INDEX_PITCH] * _mc_pitch_weight;
 	// yaw
-	_actuators_out_0->control[actuator_controls_s::INDEX_YAW] =
+	_actuators_out_0->control[actuator_controls_s::INDEX_YAW] = 
 		_actuators_mc_in->control[actuator_controls_s::INDEX_YAW] * _mc_yaw_weight;
 	// throttle
-	_actuators_out_0->control[actuator_controls_s::INDEX_THROTTLE] =
+	_actuators_out_0->control[actuator_controls_s::INDEX_THROTTLE] = 
 		_actuators_mc_in->control[actuator_controls_s::INDEX_THROTTLE] * _mc_throttle_weight;
 
+    }
 
 	// fixed wing controls
 	_actuators_out_1->timestamp = _actuators_fw_in->timestamp;
@@ -494,5 +523,5 @@ Standard::set_max_mc(unsigned pwm_value)
 		PX4_WARN("failed setting max values");
 	}
 
-	px4_close(fd);
+	px4_close(fd); 
 }
