@@ -249,7 +249,8 @@ void VtolAttitudeControl::actuator_controls_fw_poll()
 	orb_check(_actuator_inputs_fw, &updated);
 
 	if (updated) {
-		orb_copy(ORB_ID(actuator_controls_virtual_fw), _actuator_inputs_fw, &_actuators_fw_in);
+		//orb_copy(ORB_ID(actuator_controls_virtual_fw), _actuator_inputs_fw, &_actuators_fw_in);
+                 orb_copy(ORB_ID(actuator_controls_3), _actuator_inputs_fw, &_actuators_fw_in);  // Passthru
 	}
 }
 
@@ -647,7 +648,8 @@ void VtolAttitudeControl::task_main()
 	_land_detected_sub = orb_subscribe(ORB_ID(vehicle_land_detected));
 
 	_actuator_inputs_mc    = orb_subscribe(ORB_ID(actuator_controls_virtual_mc));
-	_actuator_inputs_fw    = orb_subscribe(ORB_ID(actuator_controls_virtual_fw));
+	 //  _actuator_inputs_fw  = orb_subscribe(ORB_ID(actuator_controls_virtual_fw));
+        _actuator_inputs_fw    = orb_subscribe(ORB_ID(actuator_controls_3));   // Pass thru
 
 	parameters_update();  // initialize parameter cache
 
@@ -766,7 +768,8 @@ void VtolAttitudeControl::task_main()
 
 			// got data from fw attitude controller
 			if (fds[1].revents & POLLIN) {
-				orb_copy(ORB_ID(actuator_controls_virtual_fw), _actuator_inputs_fw, &_actuators_fw_in);
+				// orb_copy(ORB_ID(actuator_controls_virtual_fw), _actuator_inputs_fw, &_actuators_fw_in);
+                                orb_copy(ORB_ID(actuator_controls_3), _actuator_inputs_fw, &_actuators_fw_in);  // Passthru
 				vehicle_manual_poll();
 
 				_vtol_type->update_fw_state();
@@ -788,7 +791,8 @@ void VtolAttitudeControl::task_main()
 			}
 
 			if (fds[1].revents & POLLIN) {
-				orb_copy(ORB_ID(actuator_controls_virtual_fw), _actuator_inputs_fw, &_actuators_fw_in);
+				//orb_copy(ORB_ID(actuator_controls_virtual_fw), _actuator_inputs_fw, &_actuators_fw_in);
+                                orb_copy(ORB_ID(actuator_controls_3), _actuator_inputs_fw, &_actuators_fw_in);  // Passthru
 				got_new_data = true;
 			}
 
