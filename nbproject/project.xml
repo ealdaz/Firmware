@@ -21,6 +21,10 @@
                     <name>px4fmu-v2_default_upload</name>
                     <type>0</type>
                 </confElem>
+                <confElem>
+                    <name>posix_sitl_default</name>
+                    <type>0</type>
+                </confElem>
             </confList>
             <formatting>
                 <project-formatting-style>false</project-formatting-style>

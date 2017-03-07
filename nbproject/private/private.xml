@@ -13,17 +13,14 @@
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/rover_steering_control/main.cpp</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_type.cpp</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_att_control_main.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_type.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/src/modules/uORB/topics/actuator_controls.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/fw_att_control/fw_att_control_main.cpp</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/mc_att_control/mc_att_control_main.cpp</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/standard.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/build_gazebo/setup.sh</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/commander/commander.cpp</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/mc_att_control_multiplatform/mc_att_control.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/topics_sources/actuator_controls.cpp</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_att_control_main.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/src/platforms/posix/px4_messages/px4_actuator_controls.h</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/src/modules/uORB/topics/actuator_controls.h</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_type.h</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/multi_topics_temporary/posix/actuator_controls.h</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/fw_att_control/fw_att_control_main.cpp</file>
         </group>
     </open-files>
 </project-private>
