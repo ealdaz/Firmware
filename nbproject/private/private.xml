@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <code-assistance-data xmlns="http://www.netbeans.org/ns/make-project-private/1">
-        <code-model-enabled>false</code-model-enabled>
+        <code-model-enabled>true</code-model-enabled>
     </code-assistance-data>
     <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
         <activeConfTypeElem>0</activeConfTypeElem>
-        <activeConfIndexElem>1</activeConfIndexElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
     </data>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer.h</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/rover_steering_control/main.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_px4fmu-v2_default/src/modules/systemlib/mixer/mixer_multirotor.generated.h</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer_multirotor.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/init.d/4070_spindrone</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/mixers/quad_w.main.mix</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/uORB/uORB.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/init.d/rc.mc_defaults</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/mixers/spindrone.aux.mix</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/mixers/spindrone.main.mix</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/platforms/ros/nodes/mc_mixer/mc_mixer.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/px4_simple_app/px4_simple_app.c</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/ROMFS/px4fmu_common/mixers/skywalker.main.mix</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/multi_tables.py</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer_simple.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_type.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_att_control_main.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/mc_att_control/mc_att_control_main.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/standard.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/build_gazebo/setup.sh</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/mc_att_control_multiplatform/mc_att_control.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/topics_sources/actuator_controls.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_att_control_main.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/src/platforms/posix/px4_messages/px4_actuator_controls.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/src/modules/uORB/topics/actuator_controls.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_type.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/multi_topics_temporary/posix/actuator_controls.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/fw_att_control/fw_att_control_main.cpp</file>
         </group>
     </open-files>
 </project-private>
