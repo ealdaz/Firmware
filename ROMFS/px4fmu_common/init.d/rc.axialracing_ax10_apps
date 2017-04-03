@@ -7,4 +7,5 @@
 ekf2 start
 
 # disabled the start of steering control app due to use of offboard mode only
+# Enabled for roverboat tests
 rover_steering_control start

@@ -71,6 +71,10 @@ Standard::Standard(VtolAttitudeControl *attc) :
 	_params_handles_standard.down_pitch_max = param_find("VT_DWN_PITCH_MAX");
 	_params_handles_standard.forward_thrust_scale = param_find("VT_FWD_THRUST_SC");
 	_params_handles_standard.airspeed_mode = param_find("FW_ARSP_MODE");
+        
+        // EDU configure GPIO
+        px4_arch_configgpio(GPIO_GPIO5_OUTPUT);
+        PX4_WARN("Configured PX4 IO");
 }
 
 Standard::~Standard()
@@ -421,6 +425,13 @@ void Standard::fill_actuator_outputs()
     
     _actuators_out_0->timestamp = _actuators_mc_in->timestamp;
     
+    // EDU toggle pin for test
+    static char toggle_pin = 0;
+    
+    toggle_pin ^= 1;
+    px4_arch_gpiowrite(GPIO_GPIO5_OUTPUT,toggle_pin);
+    //PX4_WARN("Configured PX4 IO %d", toggle_pin);
+    
     if ( _vtol_schedule.flight_mode == FW_MODE )
     {
 	
@@ -440,6 +451,10 @@ void Standard::fill_actuator_outputs()
 	_actuators_out_0->control[actuator_controls_s::INDEX_THROTTLE] = 0.1;
                // _actuators_fw_in->control[actuator_controls_s::INDEX_THROTTLE]; //0.6;
 		//_actuators_mc_in->control[actuator_controls_s::INDEX_THROTTLE];// * _mc_throttle_weight;
+        
+        // EDU: Test pin toggling AUX6
+        //px4_arch_gpiowrite(GPIO_GPIO5_OUTPUT,1);
+        
     }
     
     else
@@ -457,6 +472,9 @@ void Standard::fill_actuator_outputs()
 	// throttle
 	_actuators_out_0->control[actuator_controls_s::INDEX_THROTTLE] = 
 		_actuators_mc_in->control[actuator_controls_s::INDEX_THROTTLE] * _mc_throttle_weight;
+        
+        // EDU: Test pin toggling AUX6
+        //px4_arch_gpiowrite(GPIO_GPIO5_OUTPUT,0);
 
     }
 

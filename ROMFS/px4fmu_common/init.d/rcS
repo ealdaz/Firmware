@@ -465,6 +465,10 @@ then
 		set AUX_MODE pwm4
 		camera_trigger start
 	fi
+            
+	# EDU: Test use this to enable GPIO in spindrone
+	set FMU_MODE pwm4
+	set AUX_MODE pwm4
 
 	# If OUTPUT_MODE == none then something is wrong with setup and we shouldn't try to enable output
 	if [ $OUTPUT_MODE != none ]
