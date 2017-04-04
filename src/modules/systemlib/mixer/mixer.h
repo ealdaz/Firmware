@@ -135,6 +135,7 @@
 
 #include "mixer_load.h"
 
+
 /**
  * Abstract class defining a mixer mixing zero or more inputs to
  * one or more outputs.
@@ -667,6 +668,10 @@ private:
 
 	float 				*_outputs_prev = nullptr;
 
+        // EDU Get value of parameter SYS_AUTOSTART to determine whether to use yaw or not 
+        int param_sysautostart;
+  
+        
 	/* do not allow to copy due to ptr data members */
 	MultirotorMixer(const MultirotorMixer &);
 	MultirotorMixer operator=(const MultirotorMixer &);

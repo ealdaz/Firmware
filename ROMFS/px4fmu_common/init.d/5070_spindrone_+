@@ -56,10 +56,13 @@ set MIXER spindrone_+
 #set VEHICLE_TYPE mc
 set MAV_TYPE 2
 
-# Add channels 5 and 6  , but need to add the rest as they are part of a group, info not
-# documented of course and had to sweat to find it.
-set PWM_OUT 12345678   
-#set PWM_OUT 1234
+set MIXER spindrone_+
+set PWM_OUT 1234
+set PWM_RATE 400
+
+set MIXER_AUX spindrone_+
+set PWM_ACHDIS 5
+set PWM_AUX_DISARMED 950
 
 
 if [ $AUTOCNF == yes ]

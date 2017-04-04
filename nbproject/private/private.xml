@@ -10,16 +10,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/rover_steering_control/main.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_type.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/standard.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer.h</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_att_control_main.h</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_type.h</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_posix_sitl_default/src/modules/uORB/topics/actuator_controls.h</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/fw_att_control/fw_att_control_main.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/mc_att_control/mc_att_control_main.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_px4fmu-v2_default/px4io-v2/NuttX/nuttx/include/nuttx/config.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer_multirotor.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/param/param.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/param/param.c</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/standard.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/commander/commander.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/mc_att_control_multiplatform/mc_att_control.cpp</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_att_control_main.cpp</file>
         </group>
     </open-files>
