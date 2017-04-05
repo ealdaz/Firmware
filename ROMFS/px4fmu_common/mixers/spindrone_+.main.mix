@@ -4,36 +4,9 @@ Mixer for Spindrone Airframe
 This file defines mixers suitable for controlling a Quadrocopter + based craft
 with two motors L,R for yaw control.
 
-Horizontal Throttle is fed to AUX1, the assignment is done from Radio Menu of QGroundControl. 
-I am using the right vertical lever that was used for pitch.
+I am using the left knob for Vertical Throttle, CH10 (MC Throttle), mapped with QGC
 
-Inputs to the yaw motor mixers:
-Yaw: Group 0 (Flight Control ) channel 2 (yaw) 
-Horizontal Throttle : Group 3 (RC PassThru) channel 5 (Aux1).
-
-
-Ranges:
-Yaw is -1,1
-AUX1 is -1, 1. It's mapped so that it will only work on the positive half ( although maybe make sense to have reverse?)
-
-
-
-Left Motor is connected to channel 1
-M: 2
-O:      10000  10000      0 -10000  10000
-S: 0 2  10000  10000      0 -10000  10000
-S: 3 5      0  20000 -10000 -10000  10000
-
-Right Motor is connected to channel 2
-M: 2
-O:      10000  10000      0 -10000  10000
-S: 0 2  -10000  -10000      0 -10000  10000
-S: 3 5      0  20000 -10000 -10000  10000
-
-Have declared the multirotor mixer after the simple mixers because the other way around doesn't work
-channel 6 isn't enabled for some reason
 Specify that we're running a + config
 R: 4+ 10000 10000 10000 0
-
 
 

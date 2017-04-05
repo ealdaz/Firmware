@@ -102,9 +102,9 @@ MultirotorMixer::MultirotorMixer(ControlCallback control_cb,
 	memset(_outputs_prev, _idle_speed, _rotor_count * sizeof(float));
         
         // EDU Get value of parameter SYS_AUTOSTART to determine whether to use yaw or not 
-        // DOESN'T WORK NO IDEA WHY
+        // DOESN'T WORK Becuse chip PX4IO which controls MAIN PWM ( Where MC ones are defined ) can't access the parameters or the console
         /*
-#ifdef CONFIG_ARCH_BOARD_PX4FMU_V2
+#ifdef CONFIG_ARCH_BOARD_PX4IO_V2
         param_get(param_find("SYS_AUTOSTART"), &param_sysautostart);
         PX4_WARN("Read param SYS_AUTOSTART %d", param_sysautostart);
 #endif
@@ -246,8 +246,8 @@ MultirotorMixer::mix(float *outputs, unsigned space, uint16_t *status_reg)
         float yaw = 0;
 /*    
  * 
- * DOESNT WORK NO IDEA WHY 
-#ifdef CONFIG_ARCH_BOARD_PX4FMU_V2
+ * DOESNT WORK ! The MAIN PWM outputs are on PX4IO Chip, and it doesn't have access to the parameters or to the console...
+#ifdef CONFIG_ARCH_BOARD_PX4IO_V2
         
         if(param_sysautostart == 5070 || param_sysautostart == 4070){  
                yaw = 0; // Eliminate yaw from the mixer for spindrone (non VTOL mode), so that no yaw control is done
