@@ -4,20 +4,21 @@
 #
 # @type Quadrotor +
 #
-# @output MAIN5 left motor
-# @output MAIN6 right motor
+# @output AUX1 left motor
+# @output AUX2 right motor
 #
 # @maintainer Eduardo Aldaz Carroll
 
 echo "Running Spindrone"
 echo "Now running rc.mc_defaults"
 ###############################################
-# Copy of rc.mc_defaults 
+# Modified copy of rc.mc_defaults 
 ###############################################
 set VEHICLE_TYPE mc
 
 if [ $AUTOCNF == yes ]
 then
+	echo "Runing Autoconfig = YES"
 	param set NAV_ACC_RAD 2.0
 	param set RTL_RETURN_ALT 30.0
 	param set RTL_DESCEND_ALT 10.0
@@ -28,25 +29,6 @@ then
 	param set RTL_LAND_DELAY 0
 fi
 
-# set environment variables (!= parameters)
-set PWM_RATE 400
-# tell the mixer to use parameters for these instead
-set PWM_DISARMED p:PWM_DISARMED
-set PWM_MIN p:PWM_MIN
-set PWM_MAX p:PWM_MAX
-
-# This is the gimbal pass mixer
-set MIXER_AUX pass
-set PWM_AUX_RATE 50
-set PWM_AUX_OUT 1234
-set PWM_AUX_DISARMED 1500
-set PWM_AUX_MIN 1000
-set PWM_AUX_MAX 2000
-
-if param compare PWM_DISARMED 0
-then
-	param set PWM_DISARMED 900
-fi
 
 ###############################################
 
@@ -56,17 +38,41 @@ set MIXER spindrone_+
 #set VEHICLE_TYPE mc
 set MAV_TYPE 2
 
-set MIXER spindrone_+
+
+echo "Loading Spindrone specific items" 
+
+# WARNING !!!
+# The setup of PWM values is done with these environment variables, so even if I change
+# the parameters from QGC if I don't load them here they don't get used !!!
+
+# set environment variables (!= parameters)
+# tell the mixer to use parameters for these instead
+
 set PWM_OUT 1234
 set PWM_RATE 400
+set PWM_DISARMED p:PWM_DISARMED
+set PWM_MIN p:PWM_MIN
+set PWM_MAX p:PWM_MAX
+set MIXER spindrone_+
 
-set MIXER_AUX spindrone_+
+if param compare PWM_DISARMED 0
+then
+	param set PWM_DISARMED 900
+fi
+
+set PWM_AUX_OUT 1234
 set PWM_ACHDIS 5
-set PWM_AUX_DISARMED 950
+set PWM_AUX_RATE 50
+# Use Min = 1100 to get propellers to have an effect in YAW
 
+set PWM_AUX_DISARMED 950
+set PWM_AUX_MIN p:PWM_AUX_MIN
+set PWM_AUX_MAX 2000
+set MIXER_AUX spindrone_+
 
 if [ $AUTOCNF == yes ]
 then
+	echo " RUnning autoconf=YES"
 	param set MC_ROLL_P 7.0
 	param set MC_ROLLRATE_P 0.15
 	param set MC_ROLLRATE_I 0.05

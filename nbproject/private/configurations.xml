@@ -1143,6 +1143,10 @@
                   </df>
                   <df name="2017-03-23">
                   </df>
+                  <df name="2017-04-08">
+                  </df>
+                  <df name="2017-04-10">
+                  </df>
                   <df name="sess001">
                   </df>
                 </df>
@@ -1450,6 +1454,26 @@
         <in>build_git_version.h</in>
       </df>
       <df name="build_px4fmu-v2_default">
+        <df name="CMakeFiles">
+          <df name="3.7.2">
+          </df>
+          <df name="msg_gen.dir">
+            <df name="topics_sources">
+            </df>
+          </df>
+        </df>
+        <df name="external">
+          <df name="Install">
+            <df name="include">
+            </df>
+            <df name="lib">
+            </df>
+          </df>
+        </df>
+        <df name="msg">
+          <df name="CMakeFiles">
+          </df>
+        </df>
         <df name="multi_topics_temporary">
           <df name="nuttx">
             <in>actuator_armed.h</in>
@@ -30864,25 +30888,495 @@
           </df>
         </df>
         <df name="src">
+          <df name="drivers">
+            <df name="airspeed">
+              <df name="CMakeFiles">
+                <df name="drivers__airspeed.dir">
+                </df>
+              </df>
+            </df>
+            <df name="boards">
+              <df name="px4fmu-v2">
+                <df name="CMakeFiles">
+                  <df name="drivers__boards__px4fmu-v2.dir">
+                    <df name="__">
+                      <df name="common">
+                        <df name="stm32">
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="bst">
+              <df name="CMakeFiles">
+                <df name="drivers__bst.dir">
+                </df>
+              </df>
+            </df>
+            <df name="camera_trigger">
+              <df name="CMakeFiles">
+                <df name="drivers__camera_trigger.dir">
+                  <df name="interfaces">
+                    <df name="src">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="device">
+              <df name="CMakeFiles">
+                <df name="drivers__device.dir">
+                </df>
+              </df>
+            </df>
+            <df name="ets_airspeed">
+              <df name="CMakeFiles">
+                <df name="drivers__ets_airspeed.dir">
+                </df>
+              </df>
+            </df>
+            <df name="gps">
+              <df name="CMakeFiles">
+                <df name="drivers__gps.dir">
+                  <df name="devices">
+                    <df name="src">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="hmc5883">
+              <df name="CMakeFiles">
+                <df name="drivers__hmc5883.dir">
+                </df>
+              </df>
+            </df>
+            <df name="l3gd20">
+              <df name="CMakeFiles">
+                <df name="drivers__l3gd20.dir">
+                </df>
+              </df>
+            </df>
+            <df name="led">
+              <df name="CMakeFiles">
+                <df name="drivers__led.dir">
+                </df>
+              </df>
+            </df>
+            <df name="lis3mdl">
+              <df name="CMakeFiles">
+                <df name="drivers__lis3mdl.dir">
+                </df>
+              </df>
+            </df>
+            <df name="lsm303d">
+              <df name="CMakeFiles">
+                <df name="drivers__lsm303d.dir">
+                </df>
+              </df>
+            </df>
+            <df name="meas_airspeed">
+              <df name="CMakeFiles">
+                <df name="drivers__meas_airspeed.dir">
+                </df>
+              </df>
+            </df>
+            <df name="mpu6000">
+              <df name="CMakeFiles">
+                <df name="drivers__mpu6000.dir">
+                </df>
+              </df>
+            </df>
+            <df name="mpu9250">
+              <df name="CMakeFiles">
+                <df name="drivers__mpu9250.dir">
+                </df>
+              </df>
+            </df>
+            <df name="ms5611">
+              <df name="CMakeFiles">
+                <df name="drivers__ms5611.dir">
+                </df>
+              </df>
+            </df>
+            <df name="pwm_input">
+              <df name="CMakeFiles">
+                <df name="drivers__pwm_input.dir">
+                </df>
+              </df>
+            </df>
+            <df name="pwm_out_sim">
+              <df name="CMakeFiles">
+                <df name="drivers__pwm_out_sim.dir">
+                </df>
+              </df>
+            </df>
+            <df name="px4flow">
+              <df name="CMakeFiles">
+                <df name="drivers__px4flow.dir">
+                </df>
+              </df>
+            </df>
+            <df name="px4fmu">
+              <df name="CMakeFiles">
+                <df name="drivers__px4fmu.dir">
+                </df>
+              </df>
+            </df>
+            <df name="px4io">
+              <df name="CMakeFiles">
+                <df name="drivers__px4io.dir">
+                </df>
+              </df>
+            </df>
+            <df name="rgbled">
+              <df name="CMakeFiles">
+                <df name="drivers__rgbled.dir">
+                </df>
+              </df>
+            </df>
+            <df name="sf0x">
+              <df name="CMakeFiles">
+                <df name="drivers__sf0x.dir">
+                </df>
+              </df>
+            </df>
+            <df name="stm32">
+              <df name="adc">
+                <df name="CMakeFiles">
+                  <df name="drivers__stm32__adc.dir">
+                  </df>
+                </df>
+              </df>
+              <df name="CMakeFiles">
+                <df name="drivers__stm32.dir">
+                </df>
+              </df>
+              <df name="tone_alarm">
+                <df name="CMakeFiles">
+                  <df name="drivers__stm32__tone_alarm.dir">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="trone">
+              <df name="CMakeFiles">
+                <df name="drivers__trone.dir">
+                </df>
+              </df>
+            </df>
+            <df name="ulanding">
+              <df name="CMakeFiles">
+                <df name="drivers__ulanding.dir">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="examples">
+            <df name="rover_steering_control">
+              <df name="CMakeFiles">
+                <df name="examples__rover_steering_control.dir">
+                </df>
+              </df>
+            </df>
+          </df>
           <df name="firmware">
             <df name="nuttx">
+              <df name="CMakeFiles">
+                <df name="firmware_nuttx.dir">
+                </df>
+                <df name="romfs.dir">
+                </df>
+              </df>
               <df name="extras">
               </df>
               <in>builtin_commands.c</in>
               <in>romfs.o.c</in>
             </df>
           </df>
+          <df name="lib">
+            <df name="controllib">
+              <df name="CMakeFiles">
+                <df name="lib__controllib.dir">
+                  <df name="block">
+                  </df>
+                  <df name="uorb">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="conversion">
+              <df name="CMakeFiles">
+                <df name="lib__conversion.dir">
+                </df>
+              </df>
+            </df>
+            <df name="DriverFramework">
+              <df name="framework">
+                <df name="CMakeFiles">
+                  <df name="lib__DriverFramework__framework.dir">
+                    <df name="px4">
+                    </df>
+                  </df>
+                </df>
+                <df name="src">
+                  <df name="CMakeFiles">
+                    <df name="df_driver_framework.dir">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="ecl">
+              <df name="CMakeFiles">
+                <df name="lib__ecl.dir">
+                  <df name="attitude_fw">
+                  </df>
+                  <df name="EKF">
+                  </df>
+                  <df name="l1">
+                  </df>
+                  <df name="validation">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="external_lgpl">
+              <df name="CMakeFiles">
+                <df name="lib__external_lgpl.dir">
+                  <df name="tecs">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="geo">
+              <df name="CMakeFiles">
+                <df name="lib__geo.dir">
+                </df>
+              </df>
+            </df>
+            <df name="geo_lookup">
+              <df name="CMakeFiles">
+                <df name="lib__geo_lookup.dir">
+                </df>
+              </df>
+            </df>
+            <df name="launchdetection">
+              <df name="CMakeFiles">
+                <df name="lib__launchdetection.dir">
+                </df>
+              </df>
+            </df>
+            <df name="mathlib">
+              <df name="CMakeFiles">
+                <df name="lib__mathlib.dir">
+                  <df name="math">
+                    <df name="test">
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="math">
+                <df name="filter">
+                  <df name="CMakeFiles">
+                    <df name="lib__mathlib__math__filter.dir">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="runway_takeoff">
+              <df name="CMakeFiles">
+                <df name="lib__runway_takeoff.dir">
+                </df>
+              </df>
+            </df>
+            <df name="tailsitter_recovery">
+              <df name="CMakeFiles">
+                <df name="lib__tailsitter_recovery.dir">
+                </df>
+              </df>
+            </df>
+            <df name="terrain_estimation">
+              <df name="CMakeFiles">
+                <df name="lib__terrain_estimation.dir">
+                </df>
+              </df>
+            </df>
+            <df name="version">
+              <df name="CMakeFiles">
+                <df name="lib__version.dir">
+                </df>
+              </df>
+            </df>
+          </df>
           <df name="modules">
+            <df name="commander">
+              <df name="CMakeFiles">
+                <df name="modules__commander.dir">
+                </df>
+              </df>
+            </df>
+            <df name="dataman">
+              <df name="CMakeFiles">
+                <df name="modules__dataman.dir">
+                </df>
+              </df>
+            </df>
+            <df name="ekf2">
+              <df name="CMakeFiles">
+                <df name="modules__ekf2.dir">
+                </df>
+              </df>
+            </df>
+            <df name="events">
+              <df name="CMakeFiles">
+                <df name="modules__events.dir">
+                  <df name="temperature_calibration">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="fw_att_control">
+              <df name="CMakeFiles">
+                <df name="modules__fw_att_control.dir">
+                </df>
+              </df>
+            </df>
+            <df name="fw_pos_control_l1">
+              <df name="CMakeFiles">
+                <df name="modules__fw_pos_control_l1.dir">
+                </df>
+              </df>
+            </df>
+            <df name="gpio_led">
+              <df name="CMakeFiles">
+                <df name="modules__gpio_led.dir">
+                </df>
+              </df>
+            </df>
+            <df name="land_detector">
+              <df name="CMakeFiles">
+                <df name="modules__land_detector.dir">
+                </df>
+              </df>
+            </df>
+            <df name="load_mon">
+              <df name="CMakeFiles">
+                <df name="modules__load_mon.dir">
+                </df>
+              </df>
+            </df>
+            <df name="logger">
+              <df name="CMakeFiles">
+                <df name="modules__logger.dir">
+                </df>
+              </df>
+            </df>
+            <df name="mavlink">
+              <df name="CMakeFiles">
+                <df name="modules__mavlink.dir">
+                </df>
+              </df>
+            </df>
+            <df name="mc_att_control">
+              <df name="CMakeFiles">
+                <df name="modules__mc_att_control.dir">
+                </df>
+              </df>
+            </df>
+            <df name="mc_pos_control">
+              <df name="CMakeFiles">
+                <df name="modules__mc_pos_control.dir">
+                </df>
+              </df>
+            </df>
+            <df name="navigator">
+              <df name="CMakeFiles">
+                <df name="modules__navigator.dir">
+                </df>
+              </df>
+            </df>
             <df name="param">
+              <df name="CMakeFiles">
+                <df name="modules__param.dir">
+                </df>
+              </df>
               <in>px4_parameters.c</in>
               <in>px4_parameters.h</in>
             </df>
+            <df name="px4iofirmware">
+              <df name="CMakeFiles">
+                <df name="px4io-v2.dir">
+                  <df name="__">
+                    <df name="__">
+                      <df name="drivers">
+                        <df name="boards">
+                          <df name="px4io-v2">
+                          </df>
+                        </df>
+                        <df name="stm32">
+                        </df>
+                      </df>
+                      <df name="lib">
+                        <df name="rc">
+                        </df>
+                      </df>
+                    </df>
+                    <df name="systemlib">
+                      <df name="mixer">
+                      </df>
+                      <df name="pwm_limit">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="sdlog2">
+              <df name="CMakeFiles">
+                <df name="modules__sdlog2.dir">
+                </df>
+              </df>
+            </df>
+            <df name="sensors">
+              <df name="CMakeFiles">
+                <df name="modules__sensors.dir">
+                </df>
+              </df>
+            </df>
             <df name="systemlib">
+              <df name="CMakeFiles">
+                <df name="modules__systemlib.dir">
+                  <df name="bson">
+                  </df>
+                  <df name="flashparams">
+                  </df>
+                  <df name="hysteresis">
+                  </df>
+                  <df name="param">
+                  </df>
+                  <df name="pid">
+                  </df>
+                  <df name="pwm_limit">
+                  </df>
+                </df>
+              </df>
               <df name="mixer">
+                <df name="CMakeFiles">
+                  <df name="modules__systemlib__mixer.dir">
+                  </df>
+                </df>
                 <in>mixer_multirotor.generated.h</in>
               </df>
             </df>
             <df name="uORB">
+              <df name="CMakeFiles">
+                <df name="modules__uORB.dir">
+                </df>
+              </df>
               <df name="topics">
                 <in>actuator_armed.h</in>
                 <in>actuator_controls.h</in>
@@ -30982,9 +31476,39 @@
                 <in>wind_estimate.h</in>
               </df>
             </df>
+            <df name="vtol_att_control">
+              <df name="CMakeFiles">
+                <df name="modules__vtol_att_control.dir">
+                </df>
+              </df>
+            </df>
           </df>
           <df name="platforms">
+            <df name="common">
+              <df name="CMakeFiles">
+                <df name="platforms__common.dir">
+                </df>
+              </df>
+            </df>
             <df name="nuttx">
+              <df name="CMakeFiles">
+                <df name="platforms__nuttx.dir">
+                </df>
+              </df>
+              <df name="px4_layer">
+                <df name="CMakeFiles">
+                  <df name="platforms__nuttx__px4_layer.dir">
+                    <df name="__">
+                      <df name="__">
+                        <df name="posix">
+                          <df name="px4_layer">
+                          </df>
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
               <df name="px4_messages">
                 <in>px4_actuator_armed.h</in>
                 <in>px4_actuator_controls.h</in>
@@ -31084,6 +31608,91 @@
                 <in>px4_wind_estimate.h</in>
               </df>
             </df>
+          </df>
+          <df name="systemcmds">
+            <df name="bl_update">
+              <df name="CMakeFiles">
+                <df name="systemcmds__bl_update.dir">
+                </df>
+              </df>
+            </df>
+            <df name="config">
+              <df name="CMakeFiles">
+                <df name="systemcmds__config.dir">
+                </df>
+              </df>
+            </df>
+            <df name="hardfault_log">
+              <df name="CMakeFiles">
+                <df name="systemcmds__hardfault_log.dir">
+                </df>
+              </df>
+            </df>
+            <df name="mixer">
+              <df name="CMakeFiles">
+                <df name="systemcmds__mixer.dir">
+                </df>
+              </df>
+            </df>
+            <df name="mtd">
+              <df name="CMakeFiles">
+                <df name="systemcmds__mtd.dir">
+                </df>
+              </df>
+            </df>
+            <df name="nshterm">
+              <df name="CMakeFiles">
+                <df name="systemcmds__nshterm.dir">
+                </df>
+              </df>
+            </df>
+            <df name="param">
+              <df name="CMakeFiles">
+                <df name="systemcmds__param.dir">
+                </df>
+              </df>
+            </df>
+            <df name="perf">
+              <df name="CMakeFiles">
+                <df name="systemcmds__perf.dir">
+                </df>
+              </df>
+            </df>
+            <df name="pwm">
+              <df name="CMakeFiles">
+                <df name="systemcmds__pwm.dir">
+                </df>
+              </df>
+            </df>
+            <df name="reboot">
+              <df name="CMakeFiles">
+                <df name="systemcmds__reboot.dir">
+                </df>
+              </df>
+            </df>
+            <df name="top">
+              <df name="CMakeFiles">
+                <df name="systemcmds__top.dir">
+                </df>
+              </df>
+            </df>
+            <df name="topic_listener">
+              <df name="CMakeFiles">
+                <df name="systemcmds__topic_listener.dir">
+                </df>
+              </df>
+              <in>topic_listener.cpp</in>
+            </df>
+            <df name="ver">
+              <df name="CMakeFiles">
+                <df name="systemcmds__ver.dir">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="Testing">
+          <df name="Temporary">
           </df>
         </df>
         <df name="tmp">

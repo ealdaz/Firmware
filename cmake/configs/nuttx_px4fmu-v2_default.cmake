@@ -39,14 +39,14 @@ set(config_module_list
 	drivers/airspeed
 	drivers/ets_airspeed
 	drivers/meas_airspeed
-	#drivers/frsky_telemetry
+	drivers/frsky_telemetry
 	modules/sensors
 	#drivers/mkblctrl
-	drivers/px4flow
+	#drivers/px4flow
 	#drivers/oreoled
 	#drivers/vmount
 	drivers/pwm_input
-	drivers/camera_trigger
+	#drivers/camera_trigger
 	drivers/bst
 	#drivers/snapdragon_rc_pwm
 	drivers/lis3mdl
@@ -71,7 +71,7 @@ set(config_module_list
 	systemcmds/reboot
 	#systemcmds/sd_bench
 	systemcmds/top
-	#systemcmds/topic_listener
+	systemcmds/topic_listener
 	systemcmds/ver
 
 	#
@@ -120,7 +120,7 @@ set(config_module_list
 	# Logging
 	#
 	modules/logger
-	modules/sdlog2
+	#modules/sdlog2
 
 	#
 	# Library modules
@@ -162,7 +162,7 @@ set(config_module_list
 	#
 	# Rover apps
 	#
-	examples/rover_steering_control
+	#examples/rover_steering_control
 
 	#
 	# Demo apps

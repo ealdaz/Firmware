@@ -73,8 +73,10 @@ Standard::Standard(VtolAttitudeControl *attc) :
 	_params_handles_standard.airspeed_mode = param_find("FW_ARSP_MODE");
         
         // EDU configure GPIO
+#ifdef CONFIG_ARCH_BOARD_PX4IO_V2
         px4_arch_configgpio(GPIO_GPIO5_OUTPUT);
         PX4_WARN("Configured PX4 IO");
+#endif
 }
 
 Standard::~Standard()
@@ -424,14 +426,14 @@ void Standard::fill_actuator_outputs()
     // multirotor controls
     
     _actuators_out_0->timestamp = _actuators_mc_in->timestamp;
-    
+#ifdef CONFIG_ARCH_BOARD_PX4IO_V2
     // EDU toggle pin for test
     static char toggle_pin = 0;
     
     toggle_pin ^= 1;
     px4_arch_gpiowrite(GPIO_GPIO5_OUTPUT,toggle_pin);
     //PX4_WARN("Configured PX4 IO %d", toggle_pin);
-    
+#endif
     if ( _vtol_schedule.flight_mode == FW_MODE )
     {
 	

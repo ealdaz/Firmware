@@ -12,13 +12,24 @@
         <group>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/standard.h</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/examples/rover_steering_control/main.cpp</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_att_control_main.h</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_px4fmu-v2_default/px4io-v2/NuttX/nuttx/include/nuttx/config.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/cmake/configs/nuttx_px4fmu-v2_default.cmake</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer_multirotor.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/msg/input_rc.msg</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/msg/actuator_outputs.msg</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/standard.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_att_control_main.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/build_px4fmu-v2_default/px4io-v2/NuttX/nuttx/include/nuttx/config.h</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/param/param.h</file>
             <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/param/param.c</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/standard.cpp</file>
-            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/vtol_att_control/vtol_att_control_main.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/mavlink/mavlink_messages.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/msg/wind_estimate.msg</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/Tools/sitl_gazebo/include/gazebo_motor_model.h</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/px4iofirmware/mixer.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/src/modules/systemlib/mixer/mixer_simple.cpp</file>
+            <file>file:/Users/ealdaz/Documents/PX4/FirmwareFork/Tools/sitl_gazebo/src/gazebo_motor_model.cpp</file>
         </group>
     </open-files>
 </project-private>
